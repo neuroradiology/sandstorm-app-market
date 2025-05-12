@@ -114,3 +114,7 @@ Once you have `market.tar.xz`, you can install it over an existing Sandstorm ins
 * `sandstorm/install.sh market.tar.xz`: Use the Sandstorm installer to install the App Market. Note that most of the installer prompts don't make sense. You should do a custom install with no Sandcats and no HTTPS.
 
 The file `release.sh` is a script which automates updating Sandstorm's official App Market server. To use this script, your `PATH` must contain a command `gce-ss` which expands to `gcloud compute "$@"` with Google Cloud zone and project ID set accordingly.
+
+Apps which have been published but are not yet approved can be seen in the app store by passing an explicit show_experimental parameter in the GET request:
+
+    https://apps.sandstorm.io/?show_experimental=true
